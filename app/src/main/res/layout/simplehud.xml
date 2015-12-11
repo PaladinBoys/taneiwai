@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="10dp"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:orientation="vertical" >
+
+    <ImageView 
+        android:id="@+id/simplehud_image" 
+        android:layout_width="30dp"
+		android:layout_height="30dp"
+		android:layout_gravity="center"
+		android:padding="1dp"
+		android:contentDescription="@string/app_name"/>
+
+	<TextView 
+    	android:id="@+id/simplehud_message"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:textSize="14sp"
+    	android:gravity="center"
+		android:singleLine="false"
+    	android:layout_marginTop="10dp" />
+
+</LinearLayout>

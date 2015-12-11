@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TabView">
+        <attr name="tab_texts" format="string" />
+        <attr name="tab_verticalGap" format="dimension|reference" />
+        <attr name="tab_textSize" format="dimension|reference" />
+        <attr name="tab_textSelectColor" format="color|reference" />
+        <attr name="tab_borderColor" format="color|reference" />
+        <attr name="tab_borderWidth" format="dimension|reference" />
+
+    </declare-styleable>
+
+</resources>
