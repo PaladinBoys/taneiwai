@@ -17,11 +17,11 @@ import com.taneiwai.app.R;
 
 
 /**
- * 底部导航view
- * @author weiTeng
- * @since 2015-12-4 17:29:09
- * @version v1.0.0
- */
+* 底部导航view
+* @author weiTeng
+* @since 2015-12-4 17:29:09
+* @version v1.0.0
+*/
 public class TabView extends View {
 
     private static final String TAG = "TabView";
@@ -44,14 +44,20 @@ public class TabView extends View {
     private int mBorderWidth;
     private int mBorderColor;
     private int mSelectColor;
+    private int mNoticeColor = 0xffff0000;
 
+    private int mPointRadius = 10;
     private int mDrawableWidth = 56;
     private Paint mBorderPaint;
     private Paint mPaint;
+    private Paint mNoticePaint;
 
     private int mTouchSlop;
 
+    private boolean mShowNotice;        // 是否显示红点
+    private boolean mTouchClear;
     private boolean inTapRegion;        // 是否点击到了
+    private boolean[] mPosNotices;
 
     private int mStartX;
     private int mStartY;
@@ -83,6 +89,7 @@ public class TabView extends View {
         mBorderWidth = ta.getDimensionPixelSize(R.styleable.TabView_tab_borderWidth, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 1, context.getResources().getDisplayMetrics()));
         mBorderColor = ta.getColor(R.styleable.TabView_tab_borderColor, getResources().getColor(android.R.color.darker_gray));
         mSelectColor = ta.getColor(R.styleable.TabView_tab_textSelectColor, 0xff0099cc);
+        mShowNotice = ta.getBoolean(R.styleable.TabView_tab_showNotice, false);
         ta.recycle();
 
         mBorderPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -92,6 +99,13 @@ public class TabView extends View {
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPaint.setColor(mSelectColor);
         mPaint.setTextSize(mTextSize);
+
+        if(mShowNotice){
+            mNoticePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+            mNoticePaint.setColor(mNoticeColor);
+            mPosNotices = new boolean[mTexts.length];
+        }
+
         // 图形区域
         if(mDrawableBounds == null || mDrawableBounds.length != mTexts.length){
             mDrawableBounds = new Rect[mTexts.length];
@@ -127,8 +141,36 @@ public class TabView extends View {
     }
 
     public void setDrawableWidth(int drawableWidth){
-        this.mDrawableWidth = drawableWidth;
+        if(mDrawableWidth != drawableWidth){
+            mDrawableWidth = drawableWidth;
+            invalidate();
+        }
+    }
+
+    public boolean isShowNotice() {
+        return mShowNotice;
+    }
+
+    public void showNoticePoint(boolean showNotice) {
+        if(mShowNotice != showNotice) {
+            mShowNotice = showNotice;
+            invalidate();
+        }
+    }
+
+    public void showNoticePointAtPostion(int postion, boolean toggle){
+        if(!mShowNotice){
+            return;
+        }
+        if(postion >= mTexts.length){
+            throw new IndexOutOfBoundsException("超出标签的长度");
+        }
+        mPosNotices[postion] = toggle;
         invalidate();
+    }
+
+    public void clearNoticePointOnTouch(boolean tiger){
+        mTouchClear = tiger;
     }
 
     public void setNormalDrawables(int... resId){
@@ -246,9 +288,15 @@ public class TabView extends View {
             tempSingleHeight = mDrawableWidth + mVerticalGap * 3 + mTextsBounds[0].height();
         }
 
-        if(widthMode == MeasureSpec.EXACTLY){
+        if(widthMode == MeasureSpec.AT_MOST){
+            if(widthSize <= tempSingleWidth * mTexts.length){
+                width = tempSingleWidth * mTexts.length;
+            }else{
+                width = widthSize;
+            }
+        }else if(widthMode == MeasureSpec.EXACTLY){
             width = widthSize;      // 如果尺寸给的偏小可能会显示不全
-        }else {
+        }else if(widthMode == MeasureSpec.UNSPECIFIED){
             width = tempSingleWidth * mTexts.length;
         }
 
@@ -323,6 +371,9 @@ public class TabView extends View {
                         if (mOnTabClickListener != null) {
                             mOnTabClickListener.onTabClick(index);
                         }
+                        if(mTouchClear){
+                            mPosNotices[index] = false;
+                        }
                         invalidate();
                     }
                 }
@@ -339,7 +390,6 @@ public class TabView extends View {
         canvas.drawLine(rectFirst.left, rectFirst.top, rectLast.right, rectLast.top, mBorderPaint);
         canvas.drawLine(rectFirst.left, rectFirst.bottom - 1, rectLast.right, rectLast.bottom - 1, mBorderPaint);
 
-        // 画图片
         Drawable drawable;
         for(int i = 0; i < mTexts.length; i++) {
             if (i == mCurrentIndex) {
@@ -352,6 +402,10 @@ public class TabView extends View {
             drawable.draw(canvas);
             int textOffset = (int) ((mCacheBounds[i].height() - mVerticalGap * 1.5f - mDrawableBounds[i].height() + mTextsBounds[i].height()) / 2.0f + 0.5f);
             canvas.drawText(mTexts[i], mCacheBounds[i].left + (mSingleWidth - mTextsBounds[i].width()) / 2, mDrawableBounds[i].bottom + textOffset, mPaint);
+
+            if(mShowNotice && mPosNotices[i]) {
+                canvas.drawCircle(mDrawableBounds[i].right, mDrawableBounds[i].top + mPointRadius, mPointRadius, mNoticePaint);
+            }
         }
     }
 }

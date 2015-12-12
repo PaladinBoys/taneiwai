@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!--  Tabview底部导航条的属性定义  -->
     <declare-styleable name="TabView">
         <attr name="tab_texts" format="string" />
         <attr name="tab_verticalGap" format="dimension|reference" />
@@ -8,7 +9,32 @@
         <attr name="tab_textSelectColor" format="color|reference" />
         <attr name="tab_borderColor" format="color|reference" />
         <attr name="tab_borderWidth" format="dimension|reference" />
+        <attr name="tab_showNotice" format="boolean" />
+    </declare-styleable>
 
+    <!-- switchButton的属性定义  -->
+    <declare-styleable name="SwitchButton">
+        <attr name="onDrawable" format="reference" />
+        <attr name="offDrawable" format="reference" />
+        <attr name="thumbDrawable" format="reference" />
+        <attr name="thumb_margin" format="dimension|reference" />
+        <attr name="thumb_marginTop" format="dimension|reference" />
+        <attr name="thumb_marginBottom" format="dimension|reference" />
+        <attr name="thumb_marginLeft" format="dimension|reference" />
+        <attr name="thumb_marginRight" format="dimension|reference" />
+        <attr name="thumb_width" format="dimension|reference" />
+        <attr name="thumb_height" format="dimension|reference" />
+        <attr name="onColor" format="color|reference" />
+        <attr name="offColor" format="color|reference" />
+        <attr name="thumbColor" format="color|reference" />
+        <attr name="thumbPressedColor" format="color|reference" />
+        <attr name="animationVelocity" format="integer" />
+        <attr name="radius" format="integer" />
+        <attr name="measureFactor" format="float" />
+        <attr name="insetLeft" format="dimension|reference" />
+        <attr name="insetRight" format="dimension|reference" />
+        <attr name="insetTop" format="dimension|reference" />
+        <attr name="insetBottom" format="dimension|reference" />
     </declare-styleable>
 
 </resources>

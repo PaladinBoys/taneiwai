@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/decelerate_interpolator">
+    <!-- 缩放动画 -->
+	<scale 
+	    android:fromXScale="1.0"
+	    android:toXScale="0.5"
+	    android:fromYScale="1.0"
+	    android:toYScale="0.5"
+	    android:pivotX="50%p" 
+	    android:pivotY="50%p"
+	    android:duration="200"/>
+	
+	<alpha 
+	    android:fromAlpha="1.0"
+	    android:toAlpha="0.2"
+	    android:duration="@android:integer/config_mediumAnimTime"/>
+	
+	<!-- @android:integer/config_mediumAnimTime:表示android系统的默认动画时间，400毫秒 -->
+</set>

@@ -11,6 +11,7 @@ import com.taneiwai.app.fragment.CommunionFragment;
 import com.taneiwai.app.fragment.HomeFragment;
 import com.taneiwai.app.fragment.MineFragment;
 import com.taneiwai.app.widget.TabView;
+import com.umeng.analytics.MobclickAgent;
 
 import java.util.ArrayList;
 
@@ -82,5 +83,14 @@ public class MainActivity extends AppCompatActivity implements TabView.OnTabClic
             }
             mCurrentFragment = nextFragment;
         }
+    }
+
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 }

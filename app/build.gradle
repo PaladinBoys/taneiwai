@@ -26,4 +26,5 @@ dependencies {
     compile 'com.android.support:design:23+'
     compile 'com.jakewharton:butterknife:7.0.1'
     compile files('libs/android-async-http-1.4.8.jar')
+    compile 'com.umeng.analytics:analytics:latest.integration'
 }
