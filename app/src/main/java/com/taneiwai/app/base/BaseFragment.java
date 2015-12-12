@@ -16,10 +16,14 @@ import com.taneiwai.app.util.ToastUtils;
 
 import org.json.JSONObject;
 
+import butterknife.ButterKnife;
+
 /**
  * Created by weiTeng on 15/12/6.
  */
-public abstract class BaseFragment extends Fragment implements BaseFragmentInterface{
+public abstract class BaseFragment extends Fragment implements BaseFragmentInterface, View.OnClickListener{
+
+    public static final String CLASS_ITEM = "subclass";
 
     protected Activity mActivity;
     private boolean isLoad;
@@ -33,12 +37,17 @@ public abstract class BaseFragment extends Fragment implements BaseFragmentInter
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(getLayoutId(), container, false);
+        if(getLayoutId() != 0) {
+            return inflater.inflate(getLayoutId(), container, false);
+        } else {
+            return super.onCreateView(inflater, container, savedInstanceState);
+        }
     }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        ButterKnife.bind(this, view);
         initView(view);
     }
 
@@ -70,6 +79,17 @@ public abstract class BaseFragment extends Fragment implements BaseFragmentInter
     public void onDestroy() {
         super.onDestroy();
         release();
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        ButterKnife.unbind(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 
     protected void cacheJson(String key, JSONObject jsonObject){

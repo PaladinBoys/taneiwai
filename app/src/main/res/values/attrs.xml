@@ -37,4 +37,10 @@
         <attr name="insetBottom" format="dimension|reference" />
     </declare-styleable>
 
+    <!--  ViewPagerFragment指示器  -->
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="slidingBlock" format="reference|color"/>
+        <attr name="allowWidthFull" format="boolean"/>
+        <attr name="disableViewPager" format="boolean"/>
+    </declare-styleable>
 </resources>

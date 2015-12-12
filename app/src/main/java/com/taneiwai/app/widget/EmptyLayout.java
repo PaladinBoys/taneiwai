@@ -117,10 +117,10 @@ public class EmptyLayout extends LinearLayout implements android.view.View.OnCli
                 mErrorState = NETWORK_ERROR;
                 if (NetworkUtils.isNetworkConnected(context)) {
                     mMessageTv.setText(R.string.error_view_load_error_click_to_refresh);
-                    img.setBackgroundResource(R.mipmap.page_icon_empty);
+                    img.setBackgroundResource(R.drawable.page_icon_empty);
                 } else {
                     mMessageTv.setText(R.string.error_view_network_error_click_to_refresh);
-                    img.setBackgroundResource(R.mipmap.page_icon_network);
+                    img.setBackgroundResource(R.drawable.page_icon_network);
                 }
                 img.setVisibility(View.VISIBLE);
                 clickEnable = true;
@@ -128,7 +128,7 @@ public class EmptyLayout extends LinearLayout implements android.view.View.OnCli
 
             case NODATA:
                 mErrorState = NODATA;
-                img.setBackgroundResource(R.mipmap.page_icon_empty);
+                img.setBackgroundResource(R.drawable.page_icon_empty);
                 img.setVisibility(View.VISIBLE);
                 setTvNoDataContent();
                 clickEnable = true;
@@ -140,7 +140,7 @@ public class EmptyLayout extends LinearLayout implements android.view.View.OnCli
 
             case NODATA_ENABLE_CLICK:
                 mErrorState = NODATA_ENABLE_CLICK;
-                img.setBackgroundResource(R.mipmap.page_icon_empty);
+                img.setBackgroundResource(R.drawable.page_icon_empty);
                 img.setVisibility(View.VISIBLE);
                 setTvNoDataContent();
                 clickEnable = true;

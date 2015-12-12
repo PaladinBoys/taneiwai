@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="news_viewpage_arrays">
+        <item>一（1）</item>
+        <item>一（2）</item>
+        <item>二（1）</item>
+        <item>二（2）</item>
+    </string-array>
+
+</resources>
