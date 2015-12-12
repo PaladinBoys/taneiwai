@@ -25,7 +25,7 @@
                     android:id="@+id/img_error_layout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/page_icon_empty"
+                    android:src="@drawable/page_icon_empty"
                     android:visibility="visible" />
             </RelativeLayout>
 

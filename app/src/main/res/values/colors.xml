@@ -8,4 +8,7 @@
     <color name="white">#ffffff</color>
     <color name="selected_text_color">#319cea</color>
     <color name="normal_text_color">#99d9f6</color>
+
+    <color name="day_line_color">#e7e7e7</color>
+    <color name="day_windows_bg">#fafafa</color>
 </resources>

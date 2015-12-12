@@ -55,14 +55,14 @@ public class MainActivity extends AppCompatActivity implements TabView.OnTabClic
 
         mTabview.setDrawableWidth(56);
         mTabview.setNormalDrawables(
-                R.mipmap.home_icon_head_normal,
-                R.mipmap.home_icon_com_normal,
-                R.mipmap.home_icon_mine_normal
+                R.drawable.home_icon_head_normal,
+                R.drawable.home_icon_com_normal,
+                R.drawable.home_icon_mine_normal
         );
         mTabview.setSelectedDawables(
-                R.mipmap.home_icon_head_selected,
-                R.mipmap.home_icon_com_selected,
-                R.mipmap.home_icon_mine_selected
+                R.drawable.home_icon_head_selected,
+                R.drawable.home_icon_com_selected,
+                R.drawable.home_icon_mine_selected
         );
         mTabview.setOnTabClickListener(this);
     }
