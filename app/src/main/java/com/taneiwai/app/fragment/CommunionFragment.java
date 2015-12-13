@@ -25,6 +25,4 @@ public class CommunionFragment extends BaseFragment {
     public void initData(Bundle savedInstanceState) {
 
     }
-
-
 }
