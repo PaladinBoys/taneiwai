@@ -1,2 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="D:\AndroidStudioProgram\taneiwai\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="D:\AndroidStudioProgram\taneiwai\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1_93019a10d0975fd5cabd778ed4ead2173e730344.jar" />
+    </item>
+    <item
+        jar="D:\AndroidStudioProgram\taneiwai\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="D:\AndroidStudioProgram\taneiwai\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.1.1_659245efb9c2405cabd26246b2d0aa114faa9153.jar" />
+    </item>
+    <item
+        jar="D:\AndroidStudioProgram\taneiwai\app\libs\android-async-http-1.4.8.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="77bbfe240e437ecb396d982afa0d3bd4f9090ba7">
+        <dex dex="D:\AndroidStudioProgram\taneiwai\app\build\intermediates\pre-dexed\debug\android-async-http-1.4.8_c97a83b4cf07f89a4bb58cb4e28d18094d41b16f.jar" />
+    </item>
+    <item
+        jar="D:\AndroidStudioProgram\taneiwai\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="D:\AndroidStudioProgram\taneiwai\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.1.1_ea5765fff451b6fd4b78dd6426d82336cfde32e1.jar" />
+    </item>
+    <item
+        jar="C:\Users\zhangxin45\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\7.0.1\d5d13ea991eab0252e3710e5df3d6a9d4b21d461\butterknife-7.0.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="D:\AndroidStudioProgram\taneiwai\app\build\intermediates\pre-dexed\debug\butterknife-7.0.1_12b4763f32012c8087a551fd7c1dd73e76375810.jar" />
+    </item>
+    <item
+        jar="D:\AndroidStudioProgram\taneiwai\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="D:\AndroidStudioProgram\taneiwai\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.1.1_95f4e3b9bfc4a4394eb5b7e129429f26e1c004ed.jar" />
+    </item>
+    <item
+        jar="D:\AndroidStudioProgram\taneiwai\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="D:\AndroidStudioProgram\taneiwai\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.1.1_84319e3a883a9ac884008f832b3432ed6f3b74d4.jar" />
+    </item>
+    <item
+        jar="C:\Users\zhangxin45\.gradle\caches\modules-2\files-2.1\com.umeng.analytics\analytics\5.6.1\b2705cbb19f52bb4d242458163a98d9e889c1292\analytics-5.6.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="b2705cbb19f52bb4d242458163a98d9e889c1292">
+        <dex dex="D:\AndroidStudioProgram\taneiwai\app\build\intermediates\pre-dexed\debug\analytics-5.6.1_f7bb72839ce2461bcaabd8e536b15f7fb5c4b6d0.jar" />
+    </item>
+    <item
+        jar="D:\AndroidStudio\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="D:\AndroidStudioProgram\taneiwai\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1_79c9e1d8171c935e7c3fd7c1583d5cf3bdb3d4c4.jar" />
+    </item>
+
+</items>
