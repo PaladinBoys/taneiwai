@@ -13,9 +13,7 @@ public class NetworkUtils {
 
 	/**
 	 * 判断是否有网络连接
-	 * 
-	 * @param context
-	 * @return
+	 *
 	 */
 	public static boolean isNetworkConnected(Context context) {
 
@@ -32,8 +30,6 @@ public class NetworkUtils {
 	/**
 	 * 判断WIFI网络是否可用
 	 * 
-	 * @param context
-	 * @return
 	 */
 	public static boolean isWifiConnected(Context context) {
 		if (context != null) {
@@ -50,9 +46,6 @@ public class NetworkUtils {
 
 	/**
 	 * 判断移动网络是否可用
-	 * 
-	 * @param context
-	 * @return
 	 */
 	public static boolean isMobileConnected(Context context) {
 		if (context != null) {

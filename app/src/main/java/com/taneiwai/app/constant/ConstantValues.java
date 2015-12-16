@@ -31,4 +31,5 @@ public class ConstantValues {
     public static final String WB_APP_ID = "1346062564";
     public static final String WB_APP_SECRET = "a3f298a870fc9501adb594a929777c90";
 
+    public static final String DATA = "data";
 }

@@ -46,7 +46,7 @@ class SimpleHUDDialog extends Dialog {
 		ImageView image = (ImageView)findViewById(R.id.simplehud_image);
 		
 		if(resId==R.drawable.simplehud_spinner) {
-			image.setBackgroundResource(R.anim.loading_anim);
+			image.setBackgroundResource(R.drawable.loading_anim);
 			AnimationDrawable animDrawable = (AnimationDrawable) image.getBackground();
 			animDrawable.start();
 		}else{
