@@ -19,7 +19,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:padding="@dimen/w_dp_15">
+                android:padding="@dimen/x15">
 
                 <ImageView
                     android:id="@+id/img_error_layout"
@@ -37,7 +37,7 @@
                 android:layout_marginTop="10.0dip"
                 android:lines="2"
                 android:gravity="center"
-                android:textSize="@dimen/txtSize_14" />
+                android:textSize="@dimen/x14" />
         </LinearLayout>
     </RelativeLayout>
 </RelativeLayout>

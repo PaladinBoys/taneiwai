@@ -125,7 +125,7 @@ public class SimpleHUD {
 				}
 				finishListener = null;
 			}
-		};
+		}
 	};
 	
 
