@@ -8,9 +8,9 @@
     <LinearLayout
         android:id="@+id/title_indicator"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/h_dp_48"
-        android:layout_marginLeft="@dimen/w_dp_8"
-        android:paddingRight="@dimen/w_dp_8"
+        android:layout_height="@dimen/y48"
+        android:layout_marginLeft="@dimen/x8"
+        android:paddingRight="@dimen/x8"
         android:orientation="horizontal">
 
         <ImageView
@@ -18,7 +18,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.1"
-            android:padding="@dimen/w_dp_8"
+            android:padding="@dimen/x8"
             android:src="@drawable/icon_class_manager"/>
 
         <!-- 导航标题栏 -->
@@ -37,7 +37,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.1"
-            android:padding="@dimen/w_dp_8"
+            android:padding="@dimen/x8"
             android:src="@drawable/icon_class_add"/>
 
     </LinearLayout>

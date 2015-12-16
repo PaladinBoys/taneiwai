@@ -68,7 +68,7 @@ public class Configuration implements Cloneable {
 	private Rect mInsetBounds;
 
 	private Configuration() {
-	};
+	}
 
 	public static Configuration getDefault(float density) {
 		Configuration defaultConfiguration = new Configuration();

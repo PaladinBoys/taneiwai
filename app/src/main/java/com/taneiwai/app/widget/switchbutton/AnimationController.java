@@ -140,25 +140,25 @@ class AnimationController {
 		/**
 		 * invoked when the animation start
 		 */
-		public void onAnimationStart();
+		void onAnimationStart();
 
 		/**
 		 * ask view whether continue Animating
 		 * 
 		 * @return boolean true for continueAnimating
 		 */
-		public boolean continueAnimating();
+		boolean continueAnimating();
 
 		/**
 		 * a new frame is ready.
 		 * 
 		 * @param frame next step of the animation, for linear animation, it is equal to velocity
 		 */
-		public void onFrameUpdate(int frame);
+		void onFrameUpdate(int frame);
 
 		/**
 		 * invoked when the animation complete
 		 */
-		public void onAnimateComplete();
+		void onAnimateComplete();
 	}
 }
