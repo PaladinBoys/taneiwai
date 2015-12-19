@@ -55,4 +55,15 @@
         <item name="android:textColor">@color/viewpage_selector_slide_title</item>
         <item name="android:textSize">17sp</item>
     </style>
+
+    <style name="line_style">
+        <item name="android:background">@color/line_color</item>
+        <item name="android:layout_height">@dimen/x1</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="wrap_text" parent="wrap_wrap">
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
 </resources>

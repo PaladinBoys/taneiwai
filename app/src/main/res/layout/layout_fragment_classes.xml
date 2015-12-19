@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textview"
+    <ListView
+        android:id="@+id/class_listview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="1"
-        android:textSize="20sp"/>
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:background="@color/background_color"
+        android:scrollingCache="false"/>
 
-</LinearLayout>
+    <com.taneiwai.app.widget.EmptyLayout
+        android:id="@+id/empty_layout"
+        style="@style/fill_fill"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -2,10 +2,14 @@ package com.taneiwai.app.fragment;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.taneiwai.app.R;
 import com.taneiwai.app.base.BaseFragment;
+import com.taneiwai.app.widget.EmptyLayout;
+
+import java.util.ArrayList;
 
 import butterknife.Bind;
 
@@ -14,9 +18,14 @@ import butterknife.Bind;
  */
 public class SubclassFragment extends BaseFragment {
 
+    private static final String TAG = "SubclassFragment";
 
-    @Bind(R.id.textview)
-    TextView mTextview;
+    @Bind(R.id.class_listview)
+    ListView mListView;
+    @Bind(R.id.empty_layout)
+    EmptyLayout mEmptyLayout;
+
+    private ArrayList<Class> mClasses;
 
     @Override
     public int getLayoutId() {
@@ -27,7 +36,11 @@ public class SubclassFragment extends BaseFragment {
     public void initView(View view) {
         Bundle bundle = getArguments();
         int classType = bundle.getInt(CLASS_ITEM);
-        mTextview.setText(String.valueOf(classType));
+
+        if(mClasses == null){
+            mClasses = new ArrayList<>();
+        }
+
     }
 
     @Override
