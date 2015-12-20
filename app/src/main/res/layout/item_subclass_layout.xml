@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/transparent"
+              android:padding="@dimen/x20">
+
+
+        <RelativeLayout
+            android:id="@+id/item_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x10" >
+
+            <ImageView
+                android:id="@+id/type_icon"
+                android:layout_width="@dimen/x15"
+                android:layout_height="@dimen/x15"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginTop="@dimen/x10"
+                android:src="@drawable/exercise_icon"
+                android:contentDescription="@string/app_name"/>
+
+            <TextView
+                android:id="@+id/type_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/type_icon"
+                android:layout_marginTop="@dimen/x10"
+                android:textSize="20sp"
+                android:text="家庭作业"/>
+
+            <TextView
+                android:id="@+id/time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/x10"
+                android:layout_marginTop="@dimen/x20"
+                android:text="2015-10-26"/>
+
+            <LinearLayout
+                android:id="@+id/subject_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/type_tv"
+                android:layout_marginTop="@dimen/x10"
+                android:orientation="vertical" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_below="@id/subject_content"
+                android:layout_marginTop="@dimen/x5"
+                android:layout_marginBottom="@dimen/x5"
+                style="@style/line_style" />
+
+            <RelativeLayout
+                android:id="@+id/buttom_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y60"
+                android:layout_below="@id/line">
+
+                <ImageView
+                    android:id="@+id/btn_iv"
+                    android:layout_width="@dimen/x63"
+                    android:layout_height="@dimen/x35"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/x10"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/right_btn_icon"/>
+
+                <TextView
+                    android:id="@+id/watch_tv"
+                    style="@style/wrap_text"
+                    android:drawableLeft="@drawable/eye_icon"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/x15"
+                    android:text="23" />
+                
+                <TextView
+                    android:id="@+id/right_tv"
+                    style="@style/wrap_text"
+                    android:layout_toLeftOf="@id/btn_iv"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/right_icon"
+                    android:text="23" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+</LinearLayout>
