@@ -180,7 +180,6 @@
                 android:layout_height="wrap_content"
                 android:text="创建加入班级"
                 android:textSize="@dimen/x28"
-                android:visibility="invisible"
                 />
             <ImageView
                 android:layout_marginTop="@dimen/y10"
@@ -190,8 +189,16 @@
                 android:layout_height="@dimen/y6"
                 android:src="@drawable/icon_selected_line"
                 android:scaleType="centerCrop"
-                android:visibility="invisible"
+                android:visibility="visible"
                 />
         </RelativeLayout>
     </LinearLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+    </android.support.v4.view.ViewPager>
 </LinearLayout>
